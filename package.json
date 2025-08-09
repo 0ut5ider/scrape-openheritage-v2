@@ -1,0 +1,19 @@
+{
+  "name": "scrape-openheritage-v2",
+  "version": "1.0.0",
+  "description": "Scrape Open Heritage 3D data table and store in SQLite database",
+  "main": "scrape.js",
+  "scripts": {
+    "start": "node scrape.js",
+    "scrape": "node scrape.js"
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "cheerio": "^1.0.0-rc.12",
+    "express": "^4.18.2",
+    "sqlite3": "^5.1.6"
+  },
+  "keywords": ["scraping", "heritage", "sqlite", "data"],
+  "author": "",
+  "license": "MIT"
+}

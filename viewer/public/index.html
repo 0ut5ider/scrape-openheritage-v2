@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heritage Database Viewer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏛️ Open Heritage 3D Database Viewer</h1>
+            <p>Click any column header to sort the data</p>
+        </header>
+
+        <div class="loading" id="loading">
+            <p>Loading heritage projects...</p>
+        </div>
+
+        <div class="table-container" id="tableContainer" style="display: none;">
+            <table id="projectsTable">
+                <thead>
+                    <tr>
+                        <th data-column="project_name" class="sortable">
+                            Project Name
+                            <span class="sort-indicator"></span>
+                        </th>
+                        <th data-column="country" class="sortable">
+                            Country
+                            <span class="sort-indicator"></span>
+                        </th>
+                        <th data-column="status" class="sortable">
+                            Status
+                            <span class="sort-indicator"></span>
+                        </th>
+                        <th data-column="project_link" class="sortable">
+                            Project Link
+                            <span class="sort-indicator"></span>
+                        </th>
+                        <th data-column="reuse_score" class="sortable">
+                            Reuse Score
+                            <span class="sort-indicator"></span>
+                        </th>
+                        <th data-column="publication_date" class="sortable">
+                            Publication Date
+                            <span class="sort-indicator"></span>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody id="projectsTableBody">
+                    <!-- Data will be populated by JavaScript -->
+                </tbody>
+            </table>
+        </div>
+
+        <div class="error" id="error" style="display: none;">
+            <p>Error loading data. Please check the console for details.</p>
+        </div>
+
+        <footer>
+            <p id="projectCount">0 projects loaded</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
